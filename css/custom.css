@@ -1,0 +1,280 @@
+@import url('https://fonts.cdnfonts.com/css/echelon-2');
+html, body {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+body {
+    background: rgb(191,191,191);
+    background: linear-gradient(90deg, rgba(191,191,191,1) 0%, rgba(221,221,221,1) 20%, rgba(255,255,255,1) 50%, rgba(221,221,221,1) 80%, rgba(191,191,191,1) 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-nav {
+    animation: bounceIn 0.5s ease-in-out;
+    align-items: center;
+    display: flex;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: #464646;
+    color: #464646;
+}
+
+.navbar-light .navbar-toggler:hover {
+    border-color: #000;
+    color: #000;
+}
+
+.nav-item {
+    margin: 0 15px;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link::before {
+    align-items: center;
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.active {
+    background-color: #B1B1B1;
+    border-radius: 10px;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-title {
+    letter-spacing: 1px;
+    font-family: '';
+}
+
+.portfolio-title {
+    letter-spacing: 1px;
+    font-family: '';
+}
+
+.contact-img {
+    filter: grayscale(.5);
+}
+
+.contact-title {
+    letter-spacing: 1px;
+    font-family: '';
+}
+
+.contact-text {
+    font-size: 21px;
+    letter-spacing: 1px;
+}
+
+.form-text {
+    font-size: 17px;
+    color: #000;
+}
+
+.poetry-pic{
+    filter: grayscale(.7);
+}
+
+.reyna-pic{
+    filter: grayscale(.6);
+}
+
+.keyb-pic {
+    filter: grayscale(.5);
+}
+
+.card-title {
+    border-bottom: 1px solid #a0a0a0;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    font-family: '';
+    font-size: 30px;
+}
+
+.card-text {
+    letter-spacing: 1px;
+    font-size: 17px;
+}
+
+.btn-outline-dark:hover {
+    animation: wiggle 0.5s ease-in-out;
+}
+
+
+footer {
+    flex-shrink: 0;
+}
+
+header {
+    background: no-repeat center center;
+    background-size: cover;
+    color: white;
+}
+
+.color-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 60vh;
+}
+
+.modern-web-design {
+    filter: grayscale(.2);
+}
+
+.web-design{
+    font-size: 8vw;
+    letter-spacing: 2px;
+    opacity: 9;
+    font-family: '';
+}
+
+.singleCol {
+    max-width: 1000px;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.doubleCol {
+    max-width: 2000px;
+    letter-spacing: 1px;
+    font-size: 21px;
+}
+
+.text-title {
+    font-family: '';
+    letter-spacing: 1px;
+}
+
+.animate__fadeIn{
+    animation: bounceIn 1s ease-in-out;
+}
+  
+.card {
+    animation: bounceIn 1s ease-in-out;
+}
+
+.pogi {
+    filter: saturate(.5);
+}
+
+.pogi img {
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.pogi img:hover {
+    transform: rotate(360deg) scale(2.1);
+}
+
+.btn-primary {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+    
+}
+
+footer {
+    background-color: #000000;
+    color: wheat;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    color: #dfdfdf;
+}
+
+footer a:hover svg {
+    animation: bounce 0.5s;
+}
+
+
+@media (max-width: 768.98px) {
+    .color-overlay {
+        min-height: 30vh;
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+}
+
+@keyframes bounceIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
